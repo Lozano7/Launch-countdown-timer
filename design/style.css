@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  /* Primary */
+  --GrayishBlue: hsl(237, 18%, 59%);
+  --SoftRed: hsl(345, 95%, 68%);
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --DarkdesaturatedBlue: hsl(236, 21%, 26%);
+  --card: #2d2b44;
+  --VerydarkBlue: hsl(235, 16%, 16%);
+  --VerydarkBlueDark: hsl(234, 17%, 12%);
+}
+body {
+  font-size: 10px;
+  background-color: var(--VerydarkBlue);
+  color: var(--White);
+  height: 100vh;
+  font-family: 'Red Hat Text';
+  font-style: italic;
+  font-weight: 700;
+}
+
+.contendor-fondo {
+  position: relative;
+  width: 100%;
+}
+.contendor-fondo img {
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+}
+#principal {
+  padding: 1.5em;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#encabezado {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+#encabezado h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+#clock {
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 85px;
+  grid-gap: 10px;
+}
+#textos {
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 35px;
+  grid-gap: 10px;
+  margin-top: 15px;
+}
+.contendor-cards {
+  background-color: var(--VerydarkBlueDark);
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  border-radius: 8px;
+}
+.contendor-number {
+  position: relative;
+  z-index: 99;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contendor-number p {
+  color: var(--SoftRed);
+  font-size: 4em;
+}
+
+.background1 {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: #2d2b44;
+  border-radius: 8px;
+}
+.background2 {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--DarkdesaturatedBlue);
+  border-radius: 8px;
+}
+.texto {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--DarkdesaturatedBlue);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contendor-cards {
+  text-align: center;
+}
+
+#footer {
+  height: 25%;
+}
+#footer img {
+  object-position: 80% 10%;
+}
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 1vh;
+  text-align: center;
+}
+@media screen and (min-width: 700px) {
+  #clock,
+  #textos {
+    width: 75vw;
+  }
+  #clock {
+    grid-template-rows: 115px;
+    grid-gap: 45px;
+  }
+  .texto {
+    font-size: 1.8em;
+  }
+  .contendor-number p {
+    font-size: 7.5em;
+  }
+  #encabezado {
+    margin-bottom: 75px;
+  }
+}
